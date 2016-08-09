@@ -1,3 +1,15 @@
+Sidmouth
+========
+
+This is the theme for [my blog, eRambler](http://erambler.co.uk/),
+based on Steven Enten's Hyde-Y theme for Hugo.
+It features my own colour palette,
+inspired by a trip to [Sidmouth on the Devon coast](https://en.wikipedia.org/wiki/Sidmouth).
+
+Hyde-Y's README follows below.
+
+- - - - -
+
 Hyde-Y
 ======
 
