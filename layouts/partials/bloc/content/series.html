@@ -1,0 +1,20 @@
+{{ if isset .Params "series" }}
+<div class="series">
+{{ $current := .RelPermalink }}
+<p>
+  This post is part of a series on
+  {{ index .Site.Data.Series .Params.series | default (humanize .Params.series) | markdownify }}.
+  See the rest of the series:
+</p>
+
+<ul>
+  {{ range sort (where .Site.Pages "Params.series" .Params.series) "Date" "asc" }}
+  <li>
+    {{ if eq .RelPermalink $current }}<span class="current-page">{{ else }}<a href="{{ .RelPermalink }}">{{ end }}
+      {{ .LinkTitle }}
+    {{ if eq .RelPermalink $current }}<strong>← you are here</strong></span>{{ else }}</a>{{ end }}
+  </li>
+  {{ end }}
+</ul>
+</div>
+{{ end }}
